@@ -1,0 +1,44 @@
+name: Sync Profile README Specimens
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'scripts/sync-readme.mjs'
+      - '.github/workflows/sync-readme.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Update Shipped Specimens & Telemetry SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: vishn0o
+        run: node scripts/sync-readme.mjs
+
+      - name: Commit and push updated README.md and assets if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/stats-light.svg assets/stats-dark.svg
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(sync): update shipped specimens and telemetry SVGs"
+            git push
+          else
+            echo "No README specimen changes detected."
+          fi
