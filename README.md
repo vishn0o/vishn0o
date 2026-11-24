@@ -44,25 +44,25 @@ I’m **Vishnu Suresh** (`@vishn0o`) — a Cyber Physical Systems undergraduate 
     <tr>
       <td><code>01</code></td>
       <td><a href="https://github.com/vishn0o/InkyNerd"><b>InkyNerd</b></a></td>
-      <td>Offline-first Android widget and reader for Wikipedia trivia, with bookmarks and daily quizzes — Kotlin, Compose and Room.</td>
+      <td>Local-first open-source software specimen.</td>
       <td><code>Kotlin · Compose · Room</code></td>
     </tr>
     <tr>
       <td><code>02</code></td>
       <td><a href="https://github.com/vishn0o/KathaShelf"><b>KathaShelf</b></a></td>
-      <td>Local-first desktop book tracker for Malayalam &amp; English libraries, built with Rust and egui.</td>
+      <td>Local-first desktop book tracker for Malayalam &amp; English libraries, built with Rust and egui</td>
       <td><code>Rust · egui · SQLite</code></td>
     </tr>
     <tr>
       <td><code>03</code></td>
       <td><a href="https://github.com/vishn0o/study-hub"><b>Study Hub</b></a></td>
-      <td>Offline study tracker — upload a study PDF or marker file from any AI agent and track topics, questions and predicted scores.</td>
+      <td>Offline study tracker - upload a study PDF from any AI agent and track topics, questions and predicted scores. All local, no server, no accounts.</td>
       <td><code>JavaScript · CSS · HTML</code></td>
     </tr>
     <tr>
       <td><code>04</code></td>
       <td><a href="https://github.com/vishn0o/cat-water-reminder"><b>Cat Water Reminder</b></a></td>
-      <td>Windows tray cat that nags you to hydrate — repeating &amp; one-shot reminders, transparent popup, ~13 MB resident. PowerShell/WinForms, zero dependencies.</td>
+      <td>Windows tray cat that nags you to hydrate - repeating &amp; one-shot reminders, transparent popup, ~13 MB resident. PowerShell/WinForms, no dependencies.</td>
       <td><code>PowerShell · Batchfile · VBScript</code></td>
     </tr>
   </tbody>
